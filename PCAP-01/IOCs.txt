@@ -1,0 +1,21 @@
+# Caso: Análisis Forense de Red - Caso PCAP-01
+# Fecha: 19/12/2025
+# Descripción: Indicadores de Compromiso detectados tras intrusión Web
+
+[IPs Maliciosas]
+117.11.88.124       # IP Atacante (Origen: China) - Actividad de Fuzzing y C2
+
+[Nombres de Archivo]
+image.jpg.php       # WebShell (Bypass de doble extensión)
+
+[Infraestructura C2]
+117.11.88.124:8080  # Puerto de escucha para Reverse Shell
+117.11.88.124:443   # Puerto utilizado para exfiltración vía POST
+
+[User-Agents]
+Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+
+[Técnicas Observadas]
+- Bypass de extensión de archivo
+- Exfiltración de /etc/passwd vía curl
+- Creación de named pipes (mkfifo)
