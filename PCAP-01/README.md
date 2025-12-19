@@ -72,3 +72,7 @@ Para evitar que este vector de ataque se repita, las medidas de mitigación prop
 4.  **No-Exec:** Montar la carpeta de subidas con permisos `noexec` para impedir la ejecución de scripts.
 5.  **Deshabilitar funciones peligrosas en PHP:** Configurar `disable_functions` en el `php.ini` para bloquear funciones como `exec()`, `shell_exec()`, `system()` y `passthru()`. Esto habría anulado la WebShell aunque el atacante hubiera logrado subirla.
 6.  **Centralización de Logs y Alertas:** Implementar alertas ante la ejecución de procesos inusuales por parte del usuario `www-data` (como `nc` o `mkfifo`), para una respuesta más rápida en el futuro.
+
+## 8. Notas Finales
+Este análisis ha sido realizado como parte de un desafío de entrenamiento en una plataforma de Blue Team (CTF/Lab). El objetivo es demostrar habilidades de análisis de tráfico, identificación de amenazas y documentación técnica.
+* **Herramientas utilizadas:** Wireshark, CyberChef, AbuseIPDB.
